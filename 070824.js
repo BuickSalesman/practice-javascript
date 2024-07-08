@@ -1,36 +1,3 @@
-// // Convert an array of arrays into a hash.
-// // For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
-
-// var numberPairs = [
-//   [1, 3], // 1
-//   [8, 9], // 5
-//   [2, 16], // 2
-//   [3, 6], // 3
-//   [7, 9], // ?????
-//   [10, 10], // 7
-//   [7, 13], // 4
-//   [33, 12], // 9
-//   [20, 15], // 8
-//   [9, 6], // 6
-// ];
-
-// var pairsObject = {};
-
-// var index1 = 0;
-
-// while (index1 < numberPairs.length) {
-//   var index2 = 0;
-//   while (index2 < numberPairs[index1].length) {
-//     var key = numberPairs[index1][0];
-//     var value = numberPairs[index1][1];
-//     pairsObject[key] = value;
-//     index2++;
-//   }
-//   index1++;
-// }
-
-// console.log(pairsObject);
-
 // Convert an array of arrays into a hash.
 // For example, [[1, 3], [8, 9], [2, 16]] becomes {1 => 3, 8 => 9, 2 => 16}.
 
@@ -38,13 +5,7 @@ var numberPairs = [
   [1, 3], // 1
   [8, 9], // 5
   [2, 16], // 2
-  [3, 6], // 3
-  [7, 9], // ?????
-  [10, 10], // 7
-  [7, 13], // 4
-  [33, 12], // 9
-  [20, 15], // 8
-  [9, 6], // 6
+  [2, 6],
 ];
 
 var pairsObject = {};
@@ -60,6 +21,7 @@ while (index < numberPairs.length) {
 }
 
 console.log(pairsObject);
+
 // Convert an array of hashes into a hash using the :id key from the array's hashes as the keys in the new hash.
 // For example, [{id: 1, color: "blue", price: 32}, {id: 2, color: "red", price: 12}] becomes {1 => {id: 1, color: "blue", price: 32}, 2 => {id: 2, color: "red", price: 12}}.
 
