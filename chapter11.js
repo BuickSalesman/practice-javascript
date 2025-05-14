@@ -34,12 +34,28 @@ console.log(triangleNumber(n));
 let string = "abcdefgx";
 
 function getXIndex(string) {
+  if (string.length === 0) {
+    return -1;
+  }
   if (string[0] === "x") {
     return 0;
   }
-  return 1 + getXIndex(string.slice(1));
+  return getXIndex(string.slice(1)) < 0 ? -1 : getXIndex(string.slice(1)) + 1;
 }
 
 console.log(getXIndex(string));
 
 // This problem is known as the unique paths problem. Let’s say you have a grid of rows and columns. Write a function that accepts a number of rows and a number of columns and calculates the number of possible “shortest” paths from the upper-leftmost square to the lower-rightmost square.
+
+let r = 4;
+let c = 3;
+
+function uniquePaths(r, c) {
+  if (r === 1 || c === 1) {
+    return 1;
+  }
+
+  return uniquePaths(r - 1, c) + uniquePaths(r, c - 1);
+}
+
+console.log(uniquePaths(r, c));
