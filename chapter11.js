@@ -31,4 +31,15 @@ console.log(triangleNumber(n));
 
 // Use recursion to write a function that accepts a string and returns the first index that contains the character “x”. For example, the string, "abcdefghijklmnopqrstuvwxyz" has an “x” at index 23. To keep things simple, assume the string definitely has at least one “x”.
 
+let string = "abcdefgx";
+
+function getXIndex(string) {
+  if (string[0] === "x") {
+    return 0;
+  }
+  return 1 + getXIndex(string.slice(1));
+}
+
+console.log(getXIndex(string));
+
 // This problem is known as the unique paths problem. Let’s say you have a grid of rows and columns. Write a function that accepts a number of rows and a number of columns and calculates the number of possible “shortest” paths from the upper-leftmost square to the lower-rightmost square.
