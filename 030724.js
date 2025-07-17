@@ -5,12 +5,12 @@ var word = "bookkeeper";
 var letterFrequencies = {};
 var index = 0;
 while (index < word.length) {
-  var letter = word[index];
-  if (letterFrequencies[letter] === undefined) {
-    letterFrequencies[letter] = 0;
-  }
-  letterFrequencies[letter] += 1;
-  index += 1;
+    var letter = word[index];
+    if (letterFrequencies[letter] === undefined) {
+        letterFrequencies[letter] = 0;
+    }
+    letterFrequencies[letter] += 1;
+    index += 1;
 }
 console.log(letterFrequencies);
 
@@ -19,7 +19,7 @@ console.log(letterFrequencies);
 
 var things = { chair: 100, book: 14 };
 var namePricePairs = [];
-Object.entries(things).forEach(function ([name, price]) {
-  namePricePairs.push(name, price);
+Object.entries(things).forEach(function([name, price]) {
+    namePricePairs.push(name, price);
 });
 console.log(namePricePairs);
